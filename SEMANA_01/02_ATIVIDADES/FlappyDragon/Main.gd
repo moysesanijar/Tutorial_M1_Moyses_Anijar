@@ -1,9 +1,9 @@
 extends Node # instancia a classe Node2D
 
-var status = 1
-var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var status = 1 #variavel aleatoria que permite o jogo rodar caso seja =1
+var vscore = 0 #pontuacao do jogo quando voce passa pelos caminhos que ganham pontos
+var x = 2.5 #velocidade na qual o dragao se move no eixo x, frente
+var y = 1.5 #velocidade no qual o dragao se move no eixo y, cima ou baixo
 
 # executa essa função ao carregar o jogo
 func _ready():
