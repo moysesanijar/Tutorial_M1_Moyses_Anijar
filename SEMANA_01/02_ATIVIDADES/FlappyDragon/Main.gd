@@ -2,7 +2,7 @@ extends Node # instancia a classe Node2D
 
 var status = 1 #variavel aleatoria que permite o jogo rodar caso seja =1
 var vscore = 0 #pontuacao do jogo quando voce passa pelos caminhos que ganham pontos
-var x = 2.5 #velocidade na qual o dragao se move no eixo x, frente
+var x = 2.5#velocidade na qual o dragao se move no eixo x, frente
 var y = 1.5 #velocidade no qual o dragao se move no eixo y, cima ou baixo
 
 # executa essa função ao carregar o jogo
@@ -74,5 +74,6 @@ func _on_columns_body_shape_exited(body_id, body, body_shape, local_shape):
 	if (local_shape == 2): # esse node tem 3 shapes de colisão: 0 e 1 são as colunas
 		vscore += 1 # aumenta o score
 		$score.set_text(str(vscore)) # atualiza o painel
+		
 		
 
