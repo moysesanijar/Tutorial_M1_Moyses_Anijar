@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Middle.png" type="Texture" id=1]
+[ext_resource path="res://TELAINICIAL.gd" type="Script" id=2]
+[ext_resource path="res://imagem-4-removebg-preview.png" type="Texture" id=3]
+[ext_resource path="res://imagem-3-removebg-preview.png" type="Texture" id=4]
+[ext_resource path="res://imagem-2-removebg-preview.png" type="Texture" id=5]
+[ext_resource path="res://274015-P5Y3ZG-633.jpg" type="Texture" id=6]
+[ext_resource path="res://INICIO.gd" type="Script" id=7]
+[ext_resource path="res://Node2D.gd" type="Script" id=8]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="Middle" type="Sprite" parent="."]
+position = Vector2( 521, 39 )
+scale = Vector2( 7.09722, 4.79356 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="274015-P5Y3zg-633" type="Sprite" parent="Middle"]
+visible = false
+position = Vector2( -66.6317, 101.558 )
+scale = Vector2( -1.86517e-12, 1.17137e-08 )
+texture = ExtResource( 6 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 420.0
+margin_top = 382.0
+margin_right = 623.0
+margin_bottom = 447.0
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 44.0
+margin_top = 10.0
+margin_right = 86.0
+margin_bottom = 24.0
+rect_scale = Vector2( 2.96119, 3.5627 )
+text = "START"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 420.0
+margin_top = 470.0
+margin_right = 622.0
+margin_bottom = 538.0
+
+[node name="Label" type="Label" parent="Button2"]
+margin_left = 56.0
+margin_top = 15.0
+margin_right = 91.0
+margin_bottom = 29.0
+rect_scale = Vector2( 3.15493, 2.90446 )
+text = "EXIT"
+
+[node name="Imagem-2-removebg-preview" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1100.56, 363.329 )
+scale = Vector2( -0.00106704, -0.00151876 )
+texture = ExtResource( 5 )
+
+[node name="Imagem-3-removebg-preview" type="Sprite" parent="."]
+position = Vector2( 827, 481 )
+scale = Vector2( 0.631716, 0.566975 )
+texture = ExtResource( 4 )
+
+[node name="Imagem-3-removebg-preview" type="Sprite" parent="Imagem-3-removebg-preview"]
+position = Vector2( -174.129, -105.825 )
+texture = ExtResource( 4 )
+
+[node name="Imagem-4-removebg-preview" type="Sprite" parent="."]
+position = Vector2( 110, 258 )
+scale = Vector2( 0.62825, 0.691686 )
+texture = ExtResource( 3 )
+
+[node name="Imagem-3-removebg-preview3" type="Sprite" parent="."]
+position = Vector2( 848, 393 )
+scale = Vector2( 0.631716, 0.566975 )
+texture = ExtResource( 4 )
+
+[node name="Imagem-3-removebg-preview4" type="Sprite" parent="."]
+position = Vector2( 742, 531 )
+scale = Vector2( 0.631716, 0.566975 )
+texture = ExtResource( 4 )
+
+[node name="Imagem-3-removebg-preview2" type="Sprite" parent="."]
+position = Vector2( 907, 543 )
+scale = Vector2( 0.631716, 0.566975 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 324.0
+margin_top = 129.0
+margin_right = 389.0
+margin_bottom = 145.0
+rect_scale = Vector2( 5.86632, 12.0948 )
+text = "FIND FISH"
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[connection signal="pressed" from="Button" to="Middle" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="Middle" method="_on_Button2_pressed"]
